@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="dist/css/bootstrap.css">
+        <link rel="stylesheet" href="Icon/css/all.css">
+        <style>
+            .container{
+                width:900px;
+                height:100px;
+            }
+            .row{
+                padding: 10px;
+            }
+            .smallinput{
+                height:30px;
+                width:100%;
+                margin:5px;
+            }
+            i{ color:red; font-style: normal;}
+            h1{
+                text-align: center;
+                font-size: 30px;
+            }
+            
+        </style>
+        <script>
+            const validateMe = ()=>{
+                let formStatus = true;
+
+                let fname = document.getElementById("fname");
+                   if(fname.value==""){
+                        formStatus = false;
+                        document.getElementById("fnameerror").innerText="invalid name";
+                   }else{
+                        document.getElementById("fnameerror").innerText="";
+                   }
+
+                   //lastname validation
+                   let lname = document.getElementById("lname");
+                   if(lname.value==""){
+                        formStatus = false;
+                        document.getElementById("lnameerror").innerText="invalid name";
+                   }else{
+                        document.getElementById("lnameerror").innerText="";
+                   }
+
+                    //mobile field validation
+                    let mobile = document.getElementById("mobile");
+                   var mpattern = /^[0]?[6789]\d{9}$/
+
+                   if( ! mpattern.test(mobile.value) )
+                   {
+                        formStatus = false;
+                        document.getElementById("mobileerror").innerText="invalid mobile no";
+                   }else{
+                        document.getElementById("mobileerror").innerText="";
+                   }
+
+                   //email validation
+                   let email = document.getElementById("email");
+                    var epatern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+                            // alex-123.mca@gmail.com
+                   if( ! epatern.test(email.value) )
+                   {
+                        formStatus = false;
+                        document.getElementById("emailerror").innerText="invalid email id";
+                   }else{
+                        document.getElementById("emailerror").innerText="";
+                   }
+
+                   //password validation
+                   let password = document.getElementById("password");
+                   let cpassword = document.getElementById("cpassword");
+                   if(password.value.length<6 || password.value != cpassword.value )
+                   {
+                        formStatus = false;
+                        document.getElementById("passerror").innerText="invalid or not matched";
+                        document.getElementById("cpasserror").innerText="invalid or not matched";
+                   }else{
+                        document.getElementById("passerror").innerText="";
+                        document.getElementById("cpasserror").innerText="";
+                   }
+
+                   //address validation
+                   let address = document.getElementById("address");
+                   if(address.value==""){
+                        formStatus = false;
+                        document.getElementById("addresserror").innerText="invalid name";
+                   }else{
+                        document.getElementById("addresserror").innerText="";
+                   }
+
+                   //pincode validation
+                   let pincode = document.getElementById("pincode");
+                    var epatern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+                            // alex-123.mca@gmail.com
+                   if( ! epatern.test(pincode.value) )
+                   {
+                        formStatus = false;
+                        document.getElementById("pinerror").innerText="invalid email id";
+                   }else{
+                        document.getElementById("pinerror").innerText="";
+                   }
+
+                   //state validation
+                   let state = document.getElementById("state");
+                    var epatern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+                            // alex-123.mca@gmail.com
+                   if( ! epatern.test(state.value) )
+                   {
+                        formStatus = false;
+                        document.getElementById("stateerror").innerText="invalid email id";
+                   }else{
+                        document.getElementById("stateerror").innerText="";
+                   }
+
+                   //district validation
+                   let district = document.getElementById("district");
+                    var epatern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+                            // alex-123.mca@gmail.com
+                   if( ! epatern.test(district.value) )
+                   {
+                        formStatus = false;
+                        document.getElementById("districterror").innerText="invalid email id";
+                   }else{
+                        document.getElementById("districterror").innerText="";
+                   }
+
+
+                return formStatus;    
+            }
+
+            const clearAll = () =>{
+                document.getElementById("fnameerror").innerText="";
+                document.getElementById("lnameerror").innerText="";
+                document.getElementById("mobileerror").innerText="";
+                document.getElementById("emailerror").innerText="";
+                document.getElementById("passerror").innerText="";
+                document.getElementById("cpasserror").innerText="";
+                document.getElementById("addresserror").innerText="";
+                document.getElementById("pinerror").innerText="";
+                document.getElementById("stateerror").innerText="";
+                document.getElementById("districterror").innerText="";
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <div class="container">
+                <h1> REGISTER AS CANDIDATE </h1>
+                <hr>
+                    <div class=" row">
+                        <div class="col-xl-3"> Full Name: </div>
+                        <div class="col-xl-9 "> <input type="text" id="fname" class="smallinput"/> </div>
+                        <i id="fnameerror"></i>
+                    </div>
+
+                <div class="row">
+                    <div class="col-xl-3"> Last Name: </div>
+                    <div class="col-xl-9"><input type="text" id="lname" class="smallinput"/></div>
+                    <i id="lnameerror"></i>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3"> Mobile No: </div>
+                    <div class="col-xl-9"><input type="number" id="mobile" class="smallinput"/></div>
+                    <i id="mobileerror"></i>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3"> Email Id: </div>
+                    <div class="col-xl-9"><input type="email" id="email" class="smallinput"/></div>
+                    <i id="emailerror"></i>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3"> Password: </div>
+                    <div class="col-xl-9"> <input type="password" id="password" class="smallinput" placeholder="Password max 8 character"/></div>
+                    <i id="passerror"></i>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3"> Confirm Password: </div>
+                    <div class="col-xl-9"> <input type="password" id="password" class="smallinput" placeholder="Confirm Password max 8 character"/></div>
+                    <i id="cpasserror"></i>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3"> Full Address: </div>
+                    <div class="col-xl-9"> <textarea type="address"></textarea></div>
+                    <i id="addresserror"></i>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3"> Pincode: </div>
+                    <div class="col-xl-9"> <input type="number" id="pincode" class="smallinput"/></div>
+                    <i id="pinerror"></i>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3" > State: </div>
+                    <div class="col-xl-5"> <select onchange="one(this.value)">
+                        <option> Choose State </option>
+                        <option> TamilNadu </option>
+                        <option> Karnataka </option>
+                        <option> Pondicherry </option>
+                    </select></div>
+                    <i id="stateerror"></i>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3"> District: </div>
+                    <div class="col-xl-9"> <select onchange="one(this.value)">
+                        <option value="?"> Choose District </option>
+                        <option> Coimbatore </option>
+                        <option> Thiruvarur </option>
+                        <option value="3"> Trichy </option>
+                    </select></div>
+                    <i id="districterror"></i>
+                </div>
+
+                <div class="row text-center">
+                    <div class="text-info"><input type="checkbox" id="tnc" checked/> I Agree on Terrms & Conditions</div>
+                    <i id="tncerror"></i>
+                </div>
+
+                <div class="text-center ">
+                    <button type="submit" class="btn btn-info text-white"> Register </button>
+                    <button type="reset" class="btn btn-info text-white" onclick="clearAll()"> Reset </button>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

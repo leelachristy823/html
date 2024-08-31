@@ -1,0 +1,213 @@
+
+-> Bootstrap is library of CSS.
+-> It has collection of pre-defined css classes.
+-> It is used to develop responsive webpage.
+-> According to bootstrap all type of devices that used to browse the webpage are divided into six categories
+   based on scrren width.
+       1. Extra Small device       - 1px to 576px     - screen width
+       2. Small device             - 577px to 768px   - screen width
+       3. Medium device            - 769px to 992px   - screen width
+       4. Large device             - 993px to 1200px  - screen width
+       5. Extra Large              - 1201px to 1400px - screen width
+       6. Extra Extra Large device - 1400px           - screen width
+
+
+-> Bootstrap has given 12 CSS classes for each category
+
+    1. Extra Small device - 1px to 576px - screen width
+        -col-1
+        -col-2
+        -col-3
+        -col-4
+        -col-5
+        -col-6
+        -col-7
+        -col-8
+        -col-9
+        -col-10
+        -col-11
+        -col-12
+
+    2.Small device - 577 to 768px - screen width
+
+        -col-sm-1
+        -col-sm-2
+        -col-sm-3
+        -col-sm-4
+        -col-sm-5
+        -col-sm-6
+        -col-sm-7
+        -col-sm-8
+        -col-sm-9
+        -col-sm-10
+        -col-sm-11
+        -col-sm-12
+
+    3.Medium device - 769px to 992px - screen width
+        -col-md-1
+        -col-md-2
+        -col-md-3
+        -col-md-4
+        -col-md-5
+        -col-md-6
+        -col-md-7
+        -col-md-8
+        -col-md-9
+        -col-md-10
+        -col-md-11
+        -col-md-12
+
+    4.Large device -993px to 1200px - screen width
+        -col-lg-1
+        -col-lg-2
+        -col-lg-3
+        -col-lg-4
+        -col-lg-5
+        -col-lg-6
+        -col-lg-7
+        -col-lg-8
+        -col-lg-9
+        -col-lg-10
+        -col-lg-11
+        -col-lg-12
+
+    5.Extra Large - 1201px to 1400px - screen width
+        -col-xl-1
+        -col-xl-2
+        -col-xl-3
+        -col-xl-4
+        -col-xl-5
+        -col-xl-6
+        -col-xl-7
+        -col-xl-8
+        -col-xl-9
+        -col-xl-10
+        -col-xl-11
+        -col-xl-12
+
+    6.Extra Extra Large device - 1400px - screen width
+        -col-xxl-1
+        -col-xxl-2
+        -col-xxl-3
+        -col-xxl-4
+        -col-xxl-5
+        -col-xxl-6
+        -col-xxl-7
+        -col-xxl-8
+        -col-xxl-9
+        -col-xxl-10
+        -col-xxl-11
+        -col-xxl-12
+
+    =========== 72 classes ==========
+
+Note - creating page using bootstrap follow these steps
+    1. link to bootstrap.css file
+    2. use body tag
+    3. inside body use div,section etc tag
+    4. width div or section tag use following classes
+        .container - it has margin from left and right
+        .container-fluid - it cover full width
+    5. inside container or container-fluid use the class called
+        .row
+    6. inside the row follow the columns from given 72
+       Note - Each row can hold max 12 columns.
+-----------------------------------------------------------------
+
+  classes for text color
+      .text-info        skyblue
+      .text-danger      red
+      .text-primary     blue
+      .text-success     green
+      .text-warning     yellow
+      .text-white       white
+      .text-dark        black
+      .text-secondary   grey
+
+  classes for background color
+      .bg-info        skyblue
+      .bg-danger      red
+      .bg-primary     blue
+      .bg-success     green
+      .bg-warning     yellow
+      .bg-white       white
+      .bg-dark        black
+      .bg-secondary   grey
+
+  classes for radius
+      .rounded
+      .rounded-circle
+----------------------------------------------------
+
+  classes for margin and padding
+      m - margin
+      p - padding
+      t - top
+      b - bottom
+      s - start (left)
+      e - end (right)
+
+      1 - 4px
+      2 - 8px
+      3 - 16px
+      4 - 24px
+      5 - 48px
+
+  for padding
+      .p-1, .p-2, .p-3, .p-4, .p-5
+      .pt-1, .pt-2, .pt-3, .pt-4, .pt-5
+      .pb-1, .pb-2, .pb-3, .pb-4, .pb-5
+      .ps-1, .ps-2, .ps-3, .ps-4, .ps-5
+      .pe-1, .pe-2, .pe-3, .pe-4, .pe-5
+
+  for margin
+      .m-1, .m-2, .m-3, .m-4, .m-5
+      .mt-1, .mt-2, .mt-3, .mt-4, .mt-5
+      .mb-1, .mb-2, .mb-3, .mb-4, .mb-5
+      .ms-1, .ms-2, .ms-3, .ms-4, .ms-5
+      .me-1, .me-2, .me-3, .me-4, .me-5
+
+  classes for image
+      .img-fluid
+      .img-thumbnail
+
+  classes for card
+      .card
+      .card-header
+      .card-body
+      .card-footer
+------------------------------------------------------------
+  classes for table
+      .table
+      .table-borderd
+      .table-striped
+      .table-hover
+      .table-sm
+
+  classes for left navigation
+      .list-group
+      .list-group-item
+      .active
+
+  classes for text alignment
+      .text-start
+      .text-center
+      .text-end
+
+  classes for input tags
+      .form-control - text, email, password, date, file, textarea, number
+      .form-select - select
+
+  classes for button
+      .btn
+      .btn-info        skyblue
+      .btn-danger      red
+      .btn-primary     blue
+      .btn-success     green
+      .btn-warning     yellow
+      .btn-white       white
+      .btn-dark        black
+      .btn-secondary   grey
+------------------------------------------------------------
+      
+
